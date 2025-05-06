@@ -1,0 +1,48 @@
+ Main Components:
+CUDA Kernels:
+
+add: Adds two vectors element-wise.
+
+multiply: Multiplies two square matrices.
+
+
+Host Functions:
+
+initializeVector / initializeMatrix: Fill arrays with random values (0–9).
+
+printVector / printMatrix: Display results.
+
+
+Vector Addition Flow:
+
+Allocate & initialize vectors on CPU.
+
+Copy to GPU.
+
+Launch add kernel.
+
+Copy result back to CPU and print.
+
+
+
+Matrix Multiplication Flow:
+
+Allocate & initialize matrices on CPU.
+
+Copy to GPU.
+
+
+Launch multiply kernel with 2D threads.
+
+Copy result back to CPU and print.
+
+
+
+ CUDA Concepts Used:
+__global__: Marks a GPU kernel.
+
+cudaMalloc, cudaMemcpy, cudaFree: Manage GPU memory.
+
+blockIdx, threadIdx: Used for parallel thread indexing.
+
+dim3: Used for 2D thread/block configuration.
